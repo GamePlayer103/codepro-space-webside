@@ -1,0 +1,17 @@
+on: push
+name: Deploy website to ftp on push
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v2
+        
+    - name: Sync files with ftp
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: h4.hitme.net.pl
+        username: github@codepro.com.pl
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: './src/'
