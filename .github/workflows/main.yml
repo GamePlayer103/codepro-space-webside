@@ -14,4 +14,4 @@ jobs:
         server: h4.hitme.net.pl
         username: github@codepro.com.pl
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: './src/
+        local-dir: './src/'
