@@ -7,9 +7,7 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
-      with:
-        path: 'src/'
-    
+      
     - name: Sync files with ftp
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
